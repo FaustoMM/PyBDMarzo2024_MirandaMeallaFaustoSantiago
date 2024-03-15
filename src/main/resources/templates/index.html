@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>HUESPEDES DE HOTEL</title>
+</head>
+<body>
+	<h2>HABITACIONES</h2>
+	<div>
+		
+		<form th:object="${habit}" th:action="@{/verHabitaciones}" th:method="post">
+			<label for="hcodigo">Codigo:</label><br>
+				<input type="number" id="hcodigo" th:field="*{codigo}"><br>
+				
+				<label for="hcaract">Caracteristica:</label><br>
+				<input type="text" id="hcaract" th:field="*{caracteristicas}"><br>
+				
+				<label for="htipo">Tipo:</label><br>
+				<input type="text" id="htipo" th:field="*{tipo}"><br>
+				
+				<label for="hcama">Camas:</label><br>
+				<input type="text" id="hcama" th:field="*{camas}"><br>
+				
+				<label for="hestado">Estado:</label><br>
+				<input type="text" id="hestado" th:field="*{estado}"><br>
+				
+				<input type="submit" value="verHabitaciones">
+		</form>
+		
+	</div>
+</body>
+</html>
